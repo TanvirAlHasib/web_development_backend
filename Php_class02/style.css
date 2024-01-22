@@ -1,0 +1,49 @@
+/* default section start */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+body{
+
+    font-family: 'Montserrat', sans-serif;
+    background-color: #00132D;
+
+}
+
+html{
+
+    font-size: 62.50%;
+
+}
+
+*{
+
+    margin: 0rem;
+    padding: 0rem;
+    border: none;
+    box-sizing: border-box;
+
+}
+
+
+/* default section end */
+
+
+/* main section start */
+
+
+.hero_container{
+
+    width: 100vw;
+
+}
+
+.hero_wrapper{
+
+    width: 50%;
+    margin: 0rem auto;
+
+}
+
+
+/* main section end */
