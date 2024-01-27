@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- bar logo link -->
+    <link rel="shortcut icon" href="../sign_in/logo.png" type="image/x-icon">
+    <title>forget password</title>
+</head>
+<body>
+
+
+    <!-- main section start -->
+
+
+
+    <main>
+
+
+        <!-- hero section start -->
+
+
+        <section>
+
+            <div class="hero_container">
+
+                <div class="wrapper">
+
+                    <div class="hero_form">
+
+                        <form action="../php/authentication.php" method="post">
+
+                            <!-- for making border -->
+
+                            <fieldset>
+
+                                <!-- for giving a name -->
+                
+                                <legend>Student Registration</legend>
+                                <br>
+                
+                                <!-- First Name -->
+                
+                                <label for="fname">First Name:&nbsp&nbsp&nbsp&nbsp</label> 
+                                <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><span style="color: brown;">&nbsp;*</span>
+                                <br>
+                                <br>
+                
+                                <!-- last Name -->
+                
+                                <label for="lname">Last Name:&nbsp&nbsp&nbsp&nbsp</label>
+                                <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+                                <br>
+                                <br>
+                
+                                <!-- for email -->
+                
+                                <label for="email">Email:&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;</label>
+                                <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                                <br>
+                                <br>
+                
+                                <!-- for mobile number -->
+                
+                                <label for="mobile">Mobile:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                                <input type="tel" id="mobile" name="mobile" placeholder="example +8801521746069" required><span style="color: brown;">&nbsp;*</span>
+                                <br>
+                                <br>
+                
+                                <!-- for gender -->
+                
+                                <label for="">Gender:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                </label>
+                                <input type="radio" id="male" value="Male" name="Gender">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" value="Female" name="Gender">
+                                <label for="female">Female</label>
+                                <br>
+                                <br>
+                
+                                <!-- for date of birth -->
+                
+                                <label for="birth">Date Of Birth:</label>
+                                <input type="date" id="birth" name="birth" required> <span style="color: brown;">&nbsp;*</span>
+                                <br>
+                                <br>
+                
+                                <!-- for city -->
+                
+                                <label for="city">City:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                                <input type="text" id="city" name="city">
+                                <br>
+                                <br>
+                
+                                <!-- for area pin -->
+                
+                                <label for="area">Area Pin:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                                <input type="number" name="area_pin" id="area" placeholder="example 5910" required><span style="color: brown;">&nbsp;*</span>
+                                <br>
+                                <br>
+                
+                                <!-- for country -->
+                
+                                <label for="country">Country:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                                <select name="country" id="country" required>
+                
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Afghanistan">Afghanistan</option>
+                                    <option value="Albania">Albania</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Armenia">Armenia</option>
+                                    <option value="Australia">Australia</option>
+                
+                
+                                </select><span style="color: brown;">&nbsp;*</span>
+                                <br>
+                                <br>
+                
+                                <!-- for qualification -->
+                
+                                <label for="qualification">Qualification:&nbsp</label>
+                                <select name="qualification" id="qualification" required>
+                
+                                    <option value="PSC">PSC</option>
+                                    <option value="JSC">JSC</option>
+                                    <option value="SSC">SSC</option>
+                                    <option value="HSC">HSC</option>
+                                    <option value="Post Graduate">Post Graduate</option>
+                                    <option value="Graduate">Graduate</option>
+                                    <option value="PHD">PHD</option>
+                
+                                </select><span style="color: brown;">&nbsp;*</span>
+                                <br>
+                                <br>
+                
+                                <!-- for speciality -->
+                
+                                <label for="speciality">specialization:</label>
+                                <input type="checkbox" name="specialization" id="computer">
+                                <label for="computer">Computer Science</label>
+                                <input type="checkbox" name="specialization" id="app">
+                                <label for="app">App Development</label>
+                                <input type="checkbox" name="specialization" id="web">
+                                <label for="web">Web Development</label>
+                                <input type="checkbox" name="specialization" id="full">
+                                <label for="full">Full Stack Development</label>
+                                <br>
+                                <br>
+                
+                                <!-- for favourite color -->
+                
+                                <label for="color">favourite color:</label>
+                                <input type="color" name="color" id="color"> <span style="color: rgb(228, 15, 15);">select your favourite color (optional)</span>
+                                <br>
+                                <br>
+                
+                                <!-- for password -->
+                
+                                <label for="password">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="password" name="password" id="password" required placeholder="example: 56h@#W"><span style="color: brown;">&nbsp;*</span>
+                                <br>
+                                <br>
+                
+                               <!-- for comments  -->
+                
+                                <label for="comments">Write your bio:</label>
+                                <br>
+                                <br>
+                                <textarea name="opinion" id="comments" cols="50" rows="10" placeholder="write your bio here.."></textarea>
+                                <br>
+                                <br>
+                
+                                <!-- submit button -->
+                
+                                <input type="submit" value="submit">
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                
+                                <!-- for reseting form -->
+                
+                                <input type="reset" value="reset">
+
+                                <!-- back button -->
+
+                                <button style="margin-left: 120px;"><a href="../sign_in/sign_in.html" style="text-decoration: none;">back</a></button>
+                                
+                
+                
+                            </fieldset>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- hero section end -->
+
+
+    </main>
+
+
+
+    <!-- main section end -->
+
+    
+</body>
+</html>
