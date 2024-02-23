@@ -88,7 +88,7 @@ if ($link) {
     </style>
 
     <div>
-        <form action="./dashboard/sign-in.html?msg=registration done" method="post">
+        <form action="./dashboard/sign-in.php?msg=registration done" method="post">
             <input type="submit" name="done" value="Done">
         </form>
     </div>

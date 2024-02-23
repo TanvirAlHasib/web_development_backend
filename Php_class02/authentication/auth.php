@@ -1,6 +1,10 @@
 <?php
 
-if ((isset($_POST['email'])) && (isset($_POST['password']))) {
+//session start
+session_start();
+
+//I have to use !empty method otherwise there is remaining a bug that is without any email and password user can enter the dashbord just pressing the sign in button
+if ((isset($_POST['email']) && !empty($_POST['email'])) && (isset($_POST['password']) && !empty($_POST['password']))) {
 
     $email = $_POST['email'];
     $password = md5($_POST['password']);
@@ -19,16 +23,20 @@ if ((isset($_POST['email'])) && (isset($_POST['password']))) {
 
                 if (($row[3] == $email) && ($row[13] == $password)) {
 
-                    header("Location:../dashboard/index.html");
+                    $UserName = $row[1];
+
+                    $_SESSION['name'] = $UserName;
+
+                    header("Location:../dashboard/index.php");
                     exit();
                 }
             }
 
-            header('Location:../dashboard/sign-in.html?msg= authentication failed');
+            header('Location:../dashboard/sign-in.php?msg= authentication failed');
             exit();
         } else {
 
-            header('Location:../dashboard/sign-up.html?msg= please signup');
+            header('Location:../dashboard/sign-in.php?msg= please signup');
         }
     } else {
 
@@ -36,5 +44,5 @@ if ((isset($_POST['email'])) && (isset($_POST['password']))) {
     }
 } else {
 
-    echo 'Please enter all fields';
+    header("Location:../dashboard/sign-in.php?msg=please enter all the fields");
 }

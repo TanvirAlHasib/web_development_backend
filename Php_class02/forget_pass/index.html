@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link style sheet -->
-    <link rel="stylesheet" href="style.css">
     <!-- bar logo link -->
     <link rel="shortcut icon" href="../dashboard/images/favicon.png" type="image/x-icon">
+    <!-- below we are including the jQuery and jQuery plugin .js files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <title>Mono - Responsive Admin & Dashboard Template</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
 
                     <div class="hero_form">
 
-                        <form action="../data_review.php" method="post" enctype="multipart/form-data">
+                        <form id="form" action="../data_review.php" method="post" enctype="multipart/form-data">
 
                             <!-- for making border -->
 
@@ -44,9 +45,8 @@
                                 <!-- First Name -->
                 
                                 <label for="fname">First Name:&nbsp&nbsp&nbsp&nbsp</label> 
-                                <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><span style="color: brown;">&nbsp;*</span>
-                                <br>
-                                <br>
+                                <input type="text" id="fname" name="fname" placeholder="Enter your first name" ><span style="color: brown;">&nbsp;*</span>
+                                <p></p>
                 
                                 <!-- last Name -->
                 
@@ -54,20 +54,21 @@
                                 <input type="text" id="lname" name="lname" placeholder="Enter your last name">
                                 <br>
                                 <br>
+                                
                 
                                 <!-- for email -->
                 
                                 <label for="email">Email:&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;</label>
-                                <input type="email" id="email" name="email" placeholder="example@gmail.com" required><span style="color: brown;">&nbsp;*</span>
-                                <br>
-                                <br>
+                                <input type="email" id="email" name="email" placeholder="example@gmail.com"><span style="color: brown;">&nbsp;*</span>
+                                <p></p>
+                                
                 
                                 <!-- for mobile number -->
                 
                                 <label for="mobile">Mobile:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                                <input type="tel" id="mobile" name="mobile" placeholder="example +8801521746069" required><span style="color: brown;">&nbsp;*</span>
-                                <br>
-                                <br>
+                                <input type="tel" id="mobile" name="mobile" placeholder="example +8801521746069"><span style="color: brown;">&nbsp;*</span>
+                                <p></p>
+                                
                 
                                 <!-- for gender -->
                 
@@ -79,13 +80,14 @@
                                 <label for="female">Female</label>
                                 <br>
                                 <br>
+                                
                 
                                 <!-- for date of birth -->
                 
                                 <label for="birth">Date Of Birth:</label>
-                                <input type="date" id="birth" name="birth" required> <span style="color: brown;">&nbsp;*</span>
-                                <br>
-                                <br>
+                                <input type="date" id="birth" name="birth"> <span style="color: brown;">&nbsp;*</span>
+                                <p></p>
+                                
                 
                                 <!-- for city -->
                 
@@ -97,14 +99,14 @@
                                 <!-- for area pin -->
                 
                                 <label for="area">Area Pin:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                                <input type="number" name="area_pin" id="area" placeholder="example 5910" required><span style="color: brown;">&nbsp;*</span>
-                                <br>
-                                <br>
+                                <input type="number" name="area_pin" id="area" placeholder="example 5910"><span style="color: brown;">&nbsp;*</span>
+                                <p></p>
+                                
                 
                                 <!-- for country -->
                 
                                 <label for="country">Country:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                                <select name="country" id="country" required>
+                                <select name="country" id="country">
                 
                                     <option value="Bangladesh">Bangladesh</option>
                                     <option value="Afghanistan">Afghanistan</option>
@@ -115,13 +117,13 @@
                 
                 
                                 </select><span style="color: brown;">&nbsp;*</span>
-                                <br>
-                                <br>
+                                <p></p>
+                                
                 
                                 <!-- for qualification -->
                 
                                 <label for="qualification">Qualification:&nbsp</label>
-                                <select name="qualification" id="qualification" required>
+                                <select name="qualification" id="qualification">
                 
                                     <option value="PSC">PSC</option>
                                     <option value="JSC">JSC</option>
@@ -132,8 +134,8 @@
                                     <option value="PHD">PHD</option>
                 
                                 </select><span style="color: brown;">&nbsp;*</span>
-                                <br>
-                                <br>
+                                <p></p>
+                                
                 
                                 <!-- for speciality -->
                 
@@ -159,9 +161,9 @@
                                 <!-- for password -->
                 
                                 <label for="password">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                <input type="password" name="password" id="password" required placeholder="example: 56h@#W"><span style="color: brown;">&nbsp;*</span>
-                                <br>
-                                <br>
+                                <input type="password" name="password" id="password" placeholder="example: 56h@#W"><span style="color: brown;">&nbsp;*</span>
+                                <p></p>
+                                
 
                                 <!-- for user image -->
 
@@ -191,7 +193,7 @@
 
                                 <!-- back button -->
 
-                                <button style="margin-left: 120px;"><a href="../dashboard/sign-in.html" style="text-decoration: none;">back</a></button>
+                                <button style="margin-left: 120px;"><a href="../dashboard/sign-in.php" style="text-decoration: none;">back</a></button>
                                 
                 
                 
@@ -216,6 +218,10 @@
 
 
     <!-- main section end -->
+
+    <!-- adding form validation js file -->
+
+    <script src="../dashboard/js/formValidation.js"></script>
 
     
 </body>
